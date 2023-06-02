@@ -18,6 +18,7 @@ class student{
         int get_age(){ return age;}
        void set_all(string,int,float=0);
        void print_all();
+        int get_score();
        
 };
 void student::set_all(string n,int a,float s){
@@ -32,7 +33,7 @@ void student::print_all(){
 }
 
 void student::set_age(int x){
- if(x>100|| x<1) cout<<"Incorrect age";
+ if(x>50|| x<10) cout<<"Incorrect age";
    else age=x;
 }
 void student::print_name(){
@@ -42,5 +43,9 @@ void student::set_name(string n){
   name=n;
   age=0;
   score=0;
+}
+
+int student::get_score(){
+  return score;
 }
 #endif
